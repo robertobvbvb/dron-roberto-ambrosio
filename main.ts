@@ -1,0 +1,13 @@
+input.onButtonPressed(Button.A, function () {
+    basic.showIcon(IconNames.Yes)
+    basic.pause(5000)
+    Drones.Basic_action(Drones.Basicoptions.Takeoff)
+    Drones.Hovering(2)
+    Drones.Move_action(Drones.Directionoptions.Forward, 100)
+    Drones.Rotation_action(Drones.Angleoptions.Left, 90)
+    Drones.Move_action(Drones.Directionoptions.Up, 100)
+    music.playMelody("C5 A B G A F G E ", 120)
+    Drones.Basic_action(Drones.Basicoptions.Landing)
+})
+Drones.initModule(Drones.Runmodes.Master)
+Drones.Basic_action(Drones.Basicoptions.Takeoff)
